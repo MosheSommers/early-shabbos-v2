@@ -6,6 +6,10 @@ c.addHeader('Early Shabbos');
 
 async function populateTable(){
     const z =  await d.createZemanim();
+    document.getElementById('spinner').style.display = 'none';
+    document.getElementById('spinner-message').style.display = 'none';
+
+    
     c.addTable(z, 'table');
     c.createElement('app', null, 'div', 'message');
     c.createElement('message','*', 'span', null, ['error']);

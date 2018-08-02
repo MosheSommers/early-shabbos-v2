@@ -18,7 +18,7 @@ class Components{
             this.createElement('plag','*', 'span', null, ['error']);
 
             this.createElement('table', null , 'tr', 'trow2');
-            this.createElement('trow2', 'Early Candle Lighting' , 'td');
+            this.createElement('trow2', 'Early Candle Lighting Before' , 'td');
             this.createElement('trow2', earlyCandleLighting , 'td');
 
             this.createElement('table', null , 'tr', 'trow3');
