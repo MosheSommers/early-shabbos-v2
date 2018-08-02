@@ -10,7 +10,6 @@ class Dates{
     async  createZemanim() {
         var position = await this.getPosition();  // wait for getPosition to complete
         const times = SunCalc.getTimes(this.getFriday(), position.coords.latitude,  position.coords.longitude);
-        console.log(times);
         const shkia = new Date(times.sunsetStart).getTime();
         const netz =  new Date(times.sunrise).getTime();
         const plag = shkia - (((shkia - netz) / 12) * 1.25);
