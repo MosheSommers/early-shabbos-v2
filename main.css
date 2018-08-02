@@ -1,0 +1,12 @@
+
+body{margin:0 20px;}
+h1{    margin: 10px 0;}
+table, tr, td{
+    border:1px solid #dddddd;
+    border-collapse: collapse;
+}
+td{padding: 6px;}
+.error{
+    color:#d84b4b
+}
+#message{padding: 10px 0 }
