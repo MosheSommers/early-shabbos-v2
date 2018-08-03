@@ -1,4 +1,5 @@
 class Components{
+
     addHeader(text){
         this.createElement( 'app', text,'h1', 'header');
     }
@@ -28,11 +29,27 @@ class Components{
             this.createElement('table', null , 'tr', 'trow4');
             this.createElement('trow4', 'Shkia' , 'td');
             this.createElement('trow4', shkia , 'td', 'shkia');
-            this.createElement('shkia','*', 'span', null, ['error']);
-
-            
-            
+            this.createElement('shkia','*', 'span', null, ['error']); 
         }
+    }
+
+    hideSpinner(){
+        document.getElementById('spinner').style.display = 'none';
+        document.getElementById('spinner-message').style.display = 'none';
+    }
+
+    addAccuracyMessage(){
+        this.createElement('app', null, 'div', 'message');
+        this.createElement('message','*', 'span', null, ['error']);
+        this.createElement('message','May be a few minutes off.', 'span');
+    }
+    
+    addPrintButton(){
+        this.createElement('body', null, 'img', 'print');
+        document.getElementById('print').setAttribute("src", "print.svg");
+        document.getElementById('print').setAttribute("onclick", "window.print()");
+        document.getElementById('app').style.cssFloat = 'left';
+        document.getElementById('print').style.cssFloat = 'left';
     }
 
     createElement(addTo, val = null, element = 'div', id = null, classNames = null){

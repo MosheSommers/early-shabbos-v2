@@ -9,10 +9,12 @@ td{padding: 6px;}
 .error{
     color:#d84b4b
 }
+#print{
+  transition: all .2s ease-in-out; 
+  margin:22px
+}
+#print:hover{transform: scale(1.1);}
 #message{padding: 10px 0 }
-
-
-
 .spinner {
     width: 100px;
     height: 100px;
