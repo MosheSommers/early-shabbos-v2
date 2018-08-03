@@ -11,7 +11,8 @@ td{padding: 6px;}
 }
 #print{
   transition: all .2s ease-in-out; 
-  margin:22px
+  margin:22px;
+  cursor: pointer;
 }
 #print:hover{transform: scale(1.1);}
 #message{padding: 10px 0 }

@@ -11,25 +11,16 @@ class Components{
     addTable(val = null, id, classNames = null){
         const table = this.createElement('app', null , 'table', id, classNames);
         if(val  instanceof Zemanim){
-            const { shkia, plag, candleLighting , earlyCandleLighting  } = val;
-
-            this.createElement('table', null , 'tr', 'trow1');
-            this.createElement('trow1', 'Plag' , 'td');
-            this.createElement('trow1', plag , 'td', 'plag');
-            this.createElement('plag','*', 'span', null, ['error']);
-
-            this.createElement('table', null , 'tr', 'trow2');
-            this.createElement('trow2', 'Early Candle Lighting Before' , 'td');
-            this.createElement('trow2', earlyCandleLighting , 'td');
-
-            this.createElement('table', null , 'tr', 'trow3');
-            this.createElement('trow3', 'Candle Lighting' , 'td');
-            this.createElement('trow3', candleLighting , 'td');
-
-            this.createElement('table', null , 'tr', 'trow4');
-            this.createElement('trow4', 'Shkia' , 'td');
-            this.createElement('trow4', shkia , 'td', 'shkia');
-            this.createElement('shkia','*', 'span', null, ['error']); 
+            let i = 1;
+            for(let prop in val){
+                this.createElement('table', null , 'tr', 'trow' + i);
+                this.createElement('trow' + i, prop , 'td');
+                this.createElement('trow' + i, val[prop] , 'td', prop);
+                if(prop === 'Plag' || prop === 'Shkia'){
+                    this.createElement(prop,'*', 'span', null, ['error']);
+                }
+                i++;
+            }
         }
     }
 

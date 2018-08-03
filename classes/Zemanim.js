@@ -1,9 +1,9 @@
 class Zemanim{
     constructor(shkia, plag) {
-        this.shkia = this.getTime(shkia);
-        this.plag = this.getTime(plag);
-        this.candleLighting = this.getCandleLighting(shkia);
-        this.earlyCandleLighting = this.getEarlyCandleLighting(plag);
+        this['Shkia'] = this.getTime(shkia);
+        this['Plag'] = this.getTime(plag);
+        this['Candle Lighting'] = this.getCandleLighting(shkia);
+        this['Early Candle Lighting Before'] = this.getEarlyCandleLighting(plag);
       }
 
       getTime(time){
